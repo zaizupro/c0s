@@ -4,6 +4,7 @@ TMP="./tmp"
 TOPIMG=${TMP}/"top_text.png"
 BOTIMG=${TMP}/"bott_text.png"
 OUTIMG=${TMP}/"out.png"
+BGIMG=${TMP}/"bg.png"
 
 mkdir -pv ${TMP}
 
@@ -13,3 +14,4 @@ mkdir -pv ${TMP}
 
 
 composite -gravity center ${TOPIMG} ${BOTIMG} ${OUTIMG}
+composite -gravity center ${OUTIMG} ${BGIMG} ${OUTIMG}
